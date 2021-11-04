@@ -6,6 +6,7 @@ let tagSearchBarString;
 let data = [];
 let studentsArray = [];
 let x;
+let p;
 let dataLoaded = false;
 let tagsArray = new Array;
 let tagsStorageArrayLengths = new Array;
