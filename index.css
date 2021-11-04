@@ -1,0 +1,205 @@
+@font-face {
+    font-family: myHeaderFont;
+    src: url(Raleway-Medium.woff);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(Raleway-ExtraLight.woff);
+}
+
+* {
+   font-family: myFont; 
+}
+
+:root {
+    --buttonColor: lightgrey;
+    --minus: block;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+p {
+    margin: 0px;
+    padding-top: 5px;
+}
+
+img {
+    /* display: inline-block; */
+    height: 150px;
+    width: 150px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+#boundingBox {
+    position: absolute;
+    background-color: white;
+    display: block;
+    height: 80%;
+    width: 80%;
+    overflow-y: scroll;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 5px 5px lightgrey;
+}
+
+#boundingBox::-webkit-scrollbar {
+    display: none;
+}
+
+#boundingBox {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+.student {
+    position: relative;
+    padding: 20px;
+    height: 200px;
+    /* border-bottom: 1px solid lightgrey; */
+}
+
+
+.name {
+    font-family: myHeaderFont;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+
+.info {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+    left: 220px;
+}
+
+.grades {
+    display: none;
+    width: 100%;
+    height: 200px;
+    /* border-bottom: 1px solid lightgrey; */
+    padding-left: 220px;
+}
+.button {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 75px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.button::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: var(--buttonColor);
+    height: 10px;
+    margin-top: -5px;
+    top: 50%;
+    left: 5px;
+    right: 5px;
+    z-index: 9;
+  }
+
+  .button:hover::after,
+  .button:hover::before {
+    background-color: grey;
+  }
+
+  .button::before {
+    content: " ";
+    position: absolute;
+    display: var(--minus);
+    background-color: var(--buttonColor);
+    width: 10px;
+    margin-left: -5px;
+    left: 50%;
+    top: 5px;
+    bottom: 5px;
+    z-index: 9;
+  }
+
+.container {
+    position: relative;
+    border-bottom: 1px solid lightgrey;
+}
+
+#searchBar, #tagSearchBar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+}
+
+#newTag {
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid lightgrey;
+    outline: none;
+}
+
+.tags {
+    display: block;
+    padding-left: 220px;
+    /* position: absolute; */
+}
+
+.tag {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.tagInput{
+    box-sizing: border-box;
+    width: 20%;
+    height: 30px;
+    padding-left: 20px;
+    border: none;
+    border-bottom: 3px solid lightgrey;
+    outline: none;
+    margin-bottom: 20px;
+    margin-left: 220px;
+}
+
+.clearTags {
+    background-color: lightgray;
+    color: white;
+    border: none;
+    height: 30px;
+    margin: 20px;
+    margin-left: 40px;
+    font-weight: bold;
+
+}
+
+.clearTags:hover {
+    cursor: pointer;
+}
+
+.inputBox {
+    padding-left: 20px;
+    padding-right: 20px;
+}
